@@ -65,7 +65,7 @@ void llistsortoptimizediterate(int size, struct node **map) {
 void llistsortoptimized(struct node *list, int size) {
   struct node **map = llistsortoptimizedinit(list, size);
   for (int i = 0; i < size; i++) {
-    llistsortoptimizediterate(list, size, map);
+    llistsortoptimizediterate(size, map);
   }
   free(map);
 }
