@@ -42,7 +42,7 @@ struct node **llistsortoptimizedinit(struct node *list, int size) {
 }
 
 // partialy sorts a linked list, must be called multiple times to fully sort list. needs map of linked list to work
-void llistsortoptimizediterate(struct node *list, int size, struct node **map) {
+void llistsortoptimizediterate(int size, struct node **map) {
   for (int i = 0; i < size - 1; i++) {
     if (i == size - 1) {
       int x = map[i - 1]->dat;
