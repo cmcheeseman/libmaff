@@ -24,7 +24,7 @@ struct node {
 struct node **llistsortoptimizedinit(struct node *list, int size);
 
 //! partialy sorts a linked list, must be called multiple times to fully sort list. needs map of linked list to work
-void llistsortoptimizediterate(struct node *list, int size, struct node **map);
+void llistsortoptimizediterate(int size, struct node **map);
 
 //! uses several optimizations to quickly sort a linked list
 void llistsortoptimized(struct node *list, int size);
