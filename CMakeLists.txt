@@ -1,0 +1,11 @@
+if(UNIX)
+  project(libmaff)
+  set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+  set(LIBRARY_OUTPUT_PATH  ${CMAKE_BINARY_DIR}/lib)
+else()
+  message(FATAL_ERROR "libmaff is unix exclusive")
+endif()
+
+add_library(maff SHARED pi.c area.c basic.c volume.c vector.c randomnum.c list.c llist.c llist-extra.c)
+add_executable(mafftest main.c)
+target_link_libraries(mafftest maff)
